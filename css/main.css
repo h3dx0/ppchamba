@@ -1,0 +1,103 @@
+/*
+Developer: Roberto Nuñez Corrales
+WebSite: robertonunezc.com
+*/
+
+@font-face {
+    font-family: latoFont;
+    src: url('/fonts/Lato-Regular.ttf');
+}
+
+:root {
+    --mainColor: #333333;
+    --secondaryColor: #E7441D;
+    --auxiliarColor: #F5F5F5;
+    --secondaryTextColor: white;
+}
+
+body {
+    /*background-image: url('/img/fondo.png');*/
+    background-repeat: repeat;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: latoFont;
+    color: var(--mainColor);
+}
+
+.container {
+    display: block;
+    width: 100%;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: .5em 3.5em;
+    align-items: center;
+}
+
+.main-menu {
+    display: flex;
+}
+
+.main-menu__item {
+    padding: 10px;
+}
+
+.main-menu__link {
+    text-transform: uppercase;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    height: 40vh;
+    background-color: var(--mainColor);
+    background-image: url('/img/WEB_Slider 1024.jpg');
+    background-size: contain;
+    padding: 0 3.5em;
+}
+
+.slider__text {
+    color: var(--secondaryTextColor);
+    width: 30vw;
+}
+
+.section__title {
+    color: var(--secondaryColor);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.solutions {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60vw;
+    box-shadow: 0 .5em 0.3em #b3b3b3;
+}
+
+.solution {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1 0 13%;
+    background-color: var(--auxiliarColor);
+    padding: 1.5em;
+}
+
+.footer {
+    min-height: 10vh;
+    background-color: var(--mainColor);
+    color: var(--secondaryTextColor);
+    margin-top: 1em;
+}

@@ -1,0 +1,15 @@
+:root {
+    --mainTextColor: #333333
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--mainTextColor);
+}
+
+li {
+    list-style: none;
+}
