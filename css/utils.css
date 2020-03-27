@@ -13,3 +13,19 @@ a:visited {
 li {
     list-style: none;
 }
+
+.text-align-center {
+    text-align: center;
+}
+
+.m0 {
+    margin: 0;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.fs1-5x {
+    font-size: 1.5em;
+}

@@ -1,22 +1,183 @@
- /* Extra small devices (phones, 600px and down) */
- @media only screen and (max-width: 600px) {}
+:root {
+    --mainColor: #333333;
+    --secondaryColor: #E7441D;
+    --auxiliarColor: #F5F5F5;
+    --secondaryTextColor: white;
+}
 
- /* Small devices (portrait tablets and large phones, 600px and up) */
- @media only screen and (min-width: 600px) {}
+@media only screen and (max-width: 550px) {
 
- /* Medium devices (landscape tablets, 768px and up) */
- @media only screen and (min-width: 768px) {}
+    .beneficio__item,
+    .somos-info__text {
+        font-size: 1em;
+    }
+}
 
- /* Large devices (laptops/desktops, 992px and up) */
- @media only screen and (min-width: 992px) {
-     .container {
-         max-width: 1366px;
-     }
- }
+@media only screen and (max-height: 670px) and (min-height: 670px) {
+    .beneficio__item {
+        font-size: 1.2em;
+    }
+}
 
- /* Extra large devices (large laptops and desktops, 1200px and up) */
- @media only screen and (min-width: 1200px) {
-     .container {
-         max-width: 1366px;
-     }
- }
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+
+@media only screen and (max-height: 870px) and (min-height: 670px) {
+    /* .beneficio__item {
+        font-size: 1.5em;
+    } */
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .container {
+        max-width: 1366px;
+    }
+
+    #page-nav {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .main-nav {
+        display: none;
+    }
+
+    #page-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 1.5em;
+    }
+
+    /* Show Hamburger */
+    #page-nav label {
+        display: inline-block;
+        color: var(--mainColor);
+        background: var(--secondaryTextColor);
+        font-style: normal;
+        font-size: 1.2em;
+        padding: 10px;
+        text-align: right;
+        width: 45%;
+    }
+
+    /* Break down menu items into vertical */
+    #page-nav ul li {
+        display: block;
+    }
+
+    #page-nav ul li {
+        border-top: 1px solid var(--auxiliarColor);
+        padding: .5em;
+    }
+
+    #page-nav ul li a {
+        color: var(--mainColor);
+    }
+
+    /* Toggle show/hide menu on checkbox click */
+    #page-nav ul {
+        display: none;
+    }
+
+    #page-nav input:checked~ul {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .slider {
+        background-image: url('../img/WEB_Slider.jpg');
+        height: 35vh;
+    }
+
+    .slider__text {
+        width: 90vw;
+        font-size: 7vw;
+    }
+
+    .somos {
+        background-color: var(--mainColor);
+        max-height: 40vh;
+    }
+
+    .somos-info {
+        margin: 0;
+        height: 20vh;
+    }
+
+    .somos-info__text {
+        font-size: 2vw;
+    }
+
+    .solutions {
+        width: 100%;
+    }
+
+    .beneficios {
+        background-image: url('../img/WEB_Beneficioscuadrada.jpg');
+        background-size: cover;
+        align-items: center;
+        max-height: 60vh;
+    }
+
+    .beneficios-info {
+        margin: 0;
+        max-height: 45vh;
+    }
+
+    .beneficio__item {
+        font-size: 3vw;
+    }
+
+    .beneficios .section__title {
+        margin: 0;
+    }
+
+    ol {
+        padding: 0;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        line-height: 2em;
+    }
+
+    .contacto {
+        flex-direction: column;
+    }
+
+    .contact-icon {
+        display: none;
+    }
+
+    .contact-info {
+        width: 100%;
+    }
+
+    .form-row {
+        padding: 1em;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .beneficio__item {
+        font-size: 1.7vw;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and down) */
+@media only screen and (max-width: 768px) {
+    .beneficio__item {
+        font-size: 2.5vw;
+    }
+}
