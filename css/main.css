@@ -16,7 +16,7 @@ WebSite: robertonunezc.com
 }
 
 body {
-    background-image: url('../img/fondo.png');
+    background-image: url('../img/fondo.jpg');
     background-repeat: repeat;
     font-size: 16px;
     display: flex;
@@ -28,6 +28,11 @@ body {
 
 header {
     background-color: white;
+    position: fixed;
+}
+
+.header--heigth {
+    margin-top: 6em;
 }
 
 .container {
@@ -89,7 +94,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2.5em;
+    margin-bottom: 5.5em;
 }
 
 .somos {
@@ -108,14 +113,14 @@ header {
     padding: 2em;
     background-color: var(--auxiliarColor);
     width: 60%;
-    margin-left: 6vw;
+    /*margin-left: 6vw;*/
     margin-top: 2em;
-    box-shadow: 0.3em .3em 0.5em var(--mainColor);
+    box-shadow: 0.3em .3em 0.5em var(--auxiliarColor);
 }
 
 .somos-info__text {
-    font-size: 1.5vw;
-    padding: .7em;
+    font-size: 1.5em;
+    padding: .7em 2em;
     text-align: center;
     margin: 0;
 }
@@ -125,7 +130,8 @@ header {
     flex-wrap: wrap;
     width: 60vw;
     margin-bottom: 1em;
-    box-shadow: -0.3em .3em 0.3em var(--mainColor);
+    margin-top: 2em;
+    box-shadow: -0.3em .3em 0.3em var(--auxiliarColor);
     background-color: var(--auxiliarColor);
     padding-bottom: 1em;
 }
@@ -146,7 +152,7 @@ header {
 }
 
 .beneficios {
-    align-items: flex-start;
+    align-items: center;
     background-image: url('../img/WEB_1366Beneficios.png');
     background-repeat: no-repeat;
     background-position: right;
@@ -159,18 +165,25 @@ header {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 80vh;
+    max-height: 80vh;
     padding: 2em;
     background-color: #f5f5f5;
     width: 60%;
-    margin-left: 6vw;
-    box-shadow: -0.3em .3em 0.3em var(--mainColor);
+    box-shadow: -0.3em .3em 0.3em var(--auxiliarColor);
 }
 
 .beneficio__item {
-    font-size: 1.7vw;
-    padding: .7em;
+    font-size: 1.5em;
+    padding: .7em 2em;
     word-break: break-word;
+}
+
+.beneficio__item::first-letter {
+    color: var(--secondaryColor);
+}
+
+#contacto-mobile {
+    display: none;
 }
 
 .contact-info {
@@ -195,7 +208,7 @@ header {
 
 .form-row {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     padding: 1em 3em;
 }
@@ -220,6 +233,9 @@ header {
     border-radius: .5em;
     margin: 0 1em;
 }
+.contacto-footer {
+    display: none;    
+}
 
 .footer {
     display: flex;
@@ -228,7 +244,6 @@ header {
     min-height: 10vh;
     background-color: var(--mainColor);
     color: var(--secondaryTextColor);
-    margin-top: 1em;
 }
 
 .footer__link--color {

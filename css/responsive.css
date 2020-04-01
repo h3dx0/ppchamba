@@ -5,15 +5,19 @@
     --secondaryTextColor: white;
 }
 
-@media only screen and (max-width: 550px) {
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1500px) {
 
     .beneficio__item,
     .somos-info__text {
-        font-size: 1em;
+        font-size: 1.6vw;
     }
+
 }
 
-@media only screen and (max-height: 670px) and (min-height: 670px) {
+
+@media only screen and (max-height: 670px) {
     .beneficio__item {
         font-size: 1.2em;
     }
@@ -27,9 +31,9 @@
 
 
 @media only screen and (max-height: 870px) and (min-height: 670px) {
-    /* .beneficio__item {
+    .beneficio__item {
         font-size: 1.5em;
-    } */
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -46,6 +50,10 @@
 @media only screen and (max-width: 992px) {
     .main-nav {
         display: none;
+    }
+
+    .header--heigth {
+        margin-top: 2em;
     }
 
     #page-nav {
@@ -75,7 +83,8 @@
 
     #page-nav ul li {
         border-top: 1px solid var(--auxiliarColor);
-        padding: .5em;
+        padding: .5em 1em;
+        text-align: right;
     }
 
     #page-nav ul li a {
@@ -100,50 +109,58 @@
 
     .slider__text {
         width: 90vw;
-        font-size: 7vw;
+        font-size: 2rem;
     }
 
     .somos {
         background-color: var(--mainColor);
-        max-height: 40vh;
+        min-height: 70vh;
     }
 
     .somos-info {
         margin: 0;
-        height: 20vh;
+        min-height: 20vh;
+        box-shadow: none;
+    }
+
+    .section__title {
+        font-size: 2em;
     }
 
     .somos-info__text {
-        font-size: 2vw;
+        font-size: 1.2em;
     }
 
     .solutions {
         width: 100%;
     }
 
+    .solution__text {
+        font-size: 1.2em;
+    }
+
     .beneficios {
         background-image: url('../img/WEB_Beneficioscuadrada.jpg');
         background-size: cover;
         align-items: center;
-        max-height: 60vh;
+        min-height: 60vh;
     }
 
     .beneficios-info {
         margin: 0;
-        max-height: 45vh;
+        min-height: 45vh;
+        box-shadow: none;
     }
 
     .beneficio__item {
-        font-size: 3vw;
+        font-size: 1.2em;
     }
 
     .beneficios .section__title {
         margin: 0;
     }
 
-    ol {
-        padding: 0;
-    }
+
 
     .footer {
         flex-direction: column;
@@ -151,8 +168,47 @@
         line-height: 2em;
     }
 
+    #contacto {
+        display: none;
+    }
+
+    #contacto-mobile {
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form-mobile {
+        padding: 1em;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form-mobile input.form-row__input {
+        margin: 1em 0;
+        height: 2em;
+    }
+
+    .form-mobile textarea {
+        height: 8em;
+        margin: 1em 0;
+    }
+
+    .form__button {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .form-mobile .form-row__input::placeholder {
+        color: var(--mainColor);
+    }
+
     .contacto {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .contact-icon {
@@ -160,24 +216,91 @@
     }
 
     .contact-info {
-        width: 100%;
+        width: 95%;
     }
 
     .form-row {
         padding: 1em;
     }
-}
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    .beneficio__item {
-        font-size: 1.7vw;
+    .contacto-footer {
+        display: block;
+        background-image: url('../img/contacto_naranja.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left bottom;
+        width: 100%;
+        height: 20vh;
     }
+
 }
 
 /* Medium devices (landscape tablets, 768px and down) */
 @media only screen and (max-width: 768px) {
+    .slider__text {
+        font-size: 3.5vw;
+    }
+
+    .somos {
+        max-height: 55vh;
+    }
+
+    .somos-info {
+        max-height: 35vh;
+    }
+
+    .contacto-footer {
+        height: 15vh;
+    }
+}
+
+
+@media only screen and (max-width: 550px) {
+    #page-nav label {
+        width: 30%;
+    }
+
+    .slider__text {
+        font-size: 5vw;
+    }
+
     .beneficio__item {
-        font-size: 2.5vw;
+        font-size: 3vw;
+    }
+
+    .somos-info__text {
+        font-size: 3vw;
+    }
+
+    .beneficios {
+        max-height: 40vh;
+    }
+
+    .beneficios-info {
+        max-height: 25vh;
+    }
+
+    .somos {
+        min-height: 45vh;
+    }
+
+    .somos-info {
+        min-height: 25vh;
+    }
+
+    .section__title {
+        font-size: 1.5em;
+    }
+
+    .form-row__item {
+        width: 65%;
+    }
+
+    .solution__text {
+        font-size: 3vw;
+    }
+
+    .contacto-footer {
+        height: 10vh;
     }
 }

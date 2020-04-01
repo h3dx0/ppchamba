@@ -18,7 +18,7 @@ Ofrecemos un portafolio de soluciones para cualquier tipo de necesidades en cues
         <nav class="main-nav">
             <div class="header__logo">
                 <a href="/">
-                    <img src="img/WEB_Logo PPCHAMBAS.png" alt="PPCHAMBAS" width="150">
+                    <img src="img/WEB_Logo PPCHAMBAS.png" alt="PPCHAMBAS" width="250">
                 </a>
             </div>
             <ul class="main-menu">
@@ -54,11 +54,11 @@ Ofrecemos un portafolio de soluciones para cualquier tipo de necesidades en cues
                 <li><a href="#somos">Somos</a></li>
                 <li><a href="#soluciones">Soluciones</a></li>
                 <li><a href="#beneficios">Beneficios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#contacto-mobile">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    <main class="container">
+    <main class="container header--heigth">
         <section class="slider">
             <h1 class="slider__text">
                 Solución para cualquier tipo de necesidades en cuestión de mantenimiento e imprevistos
@@ -66,7 +66,7 @@ Ofrecemos un portafolio de soluciones para cualquier tipo de necesidades en cues
         </section>
         <section id="somos" class="somos section">
             <aside class="somos-info">
-                <h1 class="section__title m0">- Somos- </h1>
+                <h1 class="section__title mt-0">- Somos - </h1>
                 <p class="somos-info__text ">
 
                     Somos el state holder que toda franquicia esta quisiera tener. Nos preocupamos por que conservar tus
@@ -81,7 +81,7 @@ Ofrecemos un portafolio de soluciones para cualquier tipo de necesidades en cues
         </section>
 
         <section id="soluciones" class="section">
-            <h1 class="section__title">- Soluciones- </h1>
+            <h1 class="section__title">- Soluciones - </h1>
             <aside class="solutions">
                 <div class="solution">
                     <div class="solution__icon">
@@ -148,14 +148,14 @@ Ofrecemos un portafolio de soluciones para cualquier tipo de necesidades en cues
                     <div class="solution__icon">
                         <img src="img/WEB_Trabajos de azulejo.png" alt="WEB_Trabajos de azulejo" width="60">
                     </div>
-                    <label for="" class="solution__text">rabajos de azulejo</label>
+                    <label for="" class="solution__text">Trabajos de azulejo</label>
                 </div>
 
                 <div class="solution">
                     <div class="solution__icon">
                         <img src="img/WEB_Aire Acondicionado.png" alt="WEB_Aire Acondicionado" width="60">
                     </div>
-                    <label for="" class="solution__text">Aire Acondicionado</label>
+                    <label for="" class="solution__text">Aire acondicionado</label>
                 </div>
 
                 <div class="solution">
@@ -173,23 +173,23 @@ Ofrecemos un portafolio de soluciones para cualquier tipo de necesidades en cues
                 </div>
                 <div class="solution">
                     <div class="solution__icon">
-                        <img src="img/WEB_Pintura.png" alt="PINTURA" width="60">
+                        <img src="img/WEB_Cerrajería.png" alt="Cerrajerua" width="60">
                     </div>
-                    <label for="" class="solution__text">Pintura</label>
+                    <label for="" class="solution__text">Cerrajería</label>
                 </div>
                 <div class="solution">
                     <div class="solution__icon">
-                        <img src="img/WEB_Pintura.png" alt="PINTURA" width="60">
+                        <img src="img/WEB_Detallesdeconstruccion.png" alt="Detalle De construccion" width="60">
                     </div>
-                    <label for="" class="solution__text">Pintura</label>
+                    <label for="" class="solution__text">Detalle de construcción</label>
                 </div>
             </aside>
-            <h3 class="text-align-center mb-0">... desde cambiar un foco hasta una pequeña remodelación</h3>
+            <h3 class="text-align-center mb-0">... desde cambiar un foco hasta una pequeña remodelación.</h3>
             <h3 class="text-align-center m0">Solo pide y lo solucionamos por ti.</h3>
         </section>
         <section id="beneficios" class="section beneficios">
             <aside class="beneficios-info">
-                <h1 class="section__title">- Beneficios- </h1>
+                <h1 class="section__title">- Beneficios - </h1>
                 <ol>
                     <li class="beneficio__item">1- Todas las soluciones con un mismo proveedor</li>
                     <li class="beneficio__item">2- Pago de servicios mediante transferencia con orden de compra aprobada
@@ -208,9 +208,9 @@ Ofrecemos un portafolio de soluciones para cualquier tipo de necesidades en cues
                 <img src="img//WEB_Icono naranja contáctanos.png" alt="CONTACTO" width="365">
             </div>
             <div class="contact-info">
-                <h1 class="section__title">-CONTACTO-</h1>
+                <h1 class="section__title">- CONTACTO -</h1>
 
-                <form action="send_mail.php" class="contact-form">
+                <form action="contact.php" method="POST" class="contact-form">
                     <div class="form-row">
                         <label for="name" class="fs1-5x">Nombre*:</label>
                         <div class="form-row__item">
@@ -228,7 +228,7 @@ Ofrecemos un portafolio de soluciones para cualquier tipo de necesidades en cues
                         <label for="telefono" class="fs1-5x">Teléfono*:</label>
                         <div class="form-row__item">
 
-                            <input type="tel" name="telefono" class="form-row__input">
+                            <input type="tel" maxlength="12" name="telefono" class="form-row__input">
                         </div>
 
                     </div>
@@ -246,7 +246,25 @@ Ofrecemos un portafolio de soluciones para cualquier tipo de necesidades en cues
                 </form>
             </div>
         </section>
+        <section id="contacto-mobile">
+            <form action="contact.php" method="POST" class="form-mobile">
+                <h1 class="section__title">- CONTACTO -</h1>
+
+                <input type="text" name="nombre" class="form-row__input" placeholder="Nombre*">
+                <input type="email" name="correo" class="form-row__input" placeholder="Email*">
+
+                <input type="tel" name="telefono" maxlength="12" class="form-row__input" placeholder="Teléfono*">
+
+                <textarea type="tel" name="mensaje" placeholder="Mensaje*" class="form-row__input"></textarea>
+                <div class="form__button">
+                    <button class="button">Enviar</button>
+                </div>
+            </form>
+        </section>
+
     </main>
+    <div class="contacto-footer"></div>
+
     <footer class="container footer">
         <div>Calle Cuauhtémoc 18, Centro, 76000
             Santiago de Querétaro, Qro</div>
@@ -254,7 +272,7 @@ Ofrecemos un portafolio de soluciones para cualquier tipo de necesidades en cues
             <a class="footer__link--color" href="mailto:hola@ppchambas.com">hola@ppchambas.com</a>
         </div>
         <div>
-            <a class="footer__link--color" href="tel:4421869592">Tel.442 186 95 92</a>
+            <a class="footer__link--color" href="tel:4421869592">Tel.442 186 95 92 | </a>
             <a class="footer__link--color" href="tel:4421733083">442 173 30 83</a>
 
         </div>
