@@ -99,7 +99,7 @@
     }
 
     .header--heigth {
-        margin-top: 6em;
+        margin-top: 4em;
     }
 
     .header__logo {
@@ -223,13 +223,12 @@
     .form-mobile input.form-row__input {
         margin: 1em 0;
         height: 2em;
-        padding: 0 1em;
     }
 
     .form-mobile textarea {
         height: 8em;
         margin: 1em 0;
-        padding: 1em 1em;
+        padding-top: .5em;
     }
 
     .form__button {
@@ -280,7 +279,7 @@
     /* .somos {
     max-height: 55vh;
 } */
-/* .somos-info {
+    /* .somos-info {
     max-height: 35vh;
 } */
 
