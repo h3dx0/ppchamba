@@ -9,20 +9,24 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1500px) {
 
+    .solutions__desc,
     .beneficio__item,
     .somos-info__text {
-        font-size: 1.6vw;
+        font-size: 1.5em;
     }
 
 }
 
-
+/*
 @media only screen and (max-height: 670px) {
-    .beneficio__item {
+
+    .solutions__desc,
+    .beneficio__item,
+    .somos-info__text {
         font-size: 1.2em;
     }
 }
-
+*/
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {}
 
@@ -31,6 +35,9 @@
 
 
 @media only screen and (max-height: 870px) and (min-height: 670px) {
+
+    .solutions__desc,
+    .somos-info__text,
     .beneficio__item {
         font-size: 1.5em;
     }
@@ -47,96 +54,28 @@
     }
 }
 
-@media only screen and (max-width: 992px) {
-    .main-nav {
-        display: none;
-    }
 
-    .header--heigth {
-        margin-top: 2em;
-    }
-
-    #page-nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        margin: 0 1.5em;
-    }
-
-    /* Show Hamburger */
-    #page-nav label {
-        display: inline-block;
-        color: var(--mainColor);
-        background: var(--secondaryTextColor);
-        font-style: normal;
-        font-size: 1.2em;
-        padding: 10px;
-        text-align: right;
-        width: 45%;
-    }
-
-    /* Break down menu items into vertical */
-    #page-nav ul li {
-        display: block;
-    }
-
-    #page-nav ul li {
-        border-top: 1px solid var(--auxiliarColor);
-        padding: .5em 1em;
-        text-align: right;
-    }
-
-    #page-nav ul li a {
-        color: var(--mainColor);
-    }
-
-    /* Toggle show/hide menu on checkbox click */
-    #page-nav ul {
-        display: none;
-    }
-
-    #page-nav input:checked~ul {
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 1024px) {
     .slider {
         background-image: url('../img/WEB_Slider.jpg');
-        height: 35vh;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
-    .slider__text {
-        width: 90vw;
-        font-size: 2rem;
+    .solutions__desc,
+    .somos-info__text,
+    .beneficio__item {
+        font-size: 1.2em;
     }
 
     .somos {
         background-color: var(--mainColor);
-        min-height: 70vh;
+        justify-content: center;
     }
 
     .somos-info {
-        margin: 0;
-        min-height: 20vh;
-        box-shadow: none;
-    }
-
-    .section__title {
-        font-size: 2em;
-    }
-
-    .somos-info__text {
-        font-size: 1.2em;
-    }
-
-    .solutions {
-        width: 100%;
-    }
-
-    .solution__text {
-        font-size: 1.2em;
+        margin-top: 0;
     }
 
     .beneficios {
@@ -152,15 +91,110 @@
         box-shadow: none;
     }
 
-    .beneficio__item {
+}
+
+@media only screen and (max-width: 992px) {
+    .main-nav {
+        display: none;
+    }
+
+    .header--heigth {
+        margin-top: 6em;
+    }
+
+    .header__logo {
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        padding-left: 2em;
+        width: 45vw;
+    }
+
+    #page-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    /* Show Hamburger */
+    #page-nav label {
+        display: inline-block;
+        color: var(--mainColor);
+        background: var(--secondaryTextColor);
+        font-style: normal;
+        font-size: 1.2em;
+        margin-right: 25px;
+        text-align: right;
+        width: 45%;
+    }
+
+    /* Break down menu items into vertical */
+    #page-nav ul li {
+        display: block;
+    }
+
+    #page-nav ul li {
+        border-top: 1px solid var(--auxiliarColor);
+        padding: .5em 1em;
+        text-align: left;
+    }
+
+    #page-nav ul li a {
+        color: var(--mainColor);
+    }
+
+    /* Toggle show/hide menu on checkbox click */
+    #page-nav ul {
+        display: none;
+    }
+
+    #page-nav input:checked~ul {
+        display: block;
+        width: 100%;
+        background-color: white;
+    }
+
+    .slider {
+        height: 45vh;
+    }
+
+    .slider__text {
+        width: 90vw;
+        font-size: 2em;
+    }
+
+
+
+    .somos-info {
+        margin: 0;
+        min-height: 20vh;
+        box-shadow: none;
+        padding: 1em;
+    }
+
+    .section__title {
+        font-size: 2em;
+    }
+
+    .somos-info__text {
+        font-size: 1.2em;
+    }
+
+    .solutions {
+        width: 100%;
+    }
+
+
+    .solution__text,
+    .beneficio__item,
+    .solutions__desc {
         font-size: 1.2em;
     }
 
     .beneficios .section__title {
         margin: 0;
     }
-
-
 
     .footer {
         flex-direction: column;
@@ -189,11 +223,13 @@
     .form-mobile input.form-row__input {
         margin: 1em 0;
         height: 2em;
+        padding: 0 1em;
     }
 
     .form-mobile textarea {
         height: 8em;
         margin: 1em 0;
+        padding: 1em 1em;
     }
 
     .form__button {
@@ -238,16 +274,15 @@
 /* Medium devices (landscape tablets, 768px and down) */
 @media only screen and (max-width: 768px) {
     .slider__text {
-        font-size: 3.5vw;
+        font-size: 2em;
     }
 
-    .somos {
-        max-height: 55vh;
-    }
-
-    .somos-info {
-        max-height: 35vh;
-    }
+    /* .somos {
+    max-height: 55vh;
+} */
+/* .somos-info {
+    max-height: 35vh;
+} */
 
     .contacto-footer {
         height: 15vh;
@@ -261,14 +296,12 @@
     }
 
     .slider__text {
-        font-size: 5vw;
+        font-size: 1.5em;
     }
 
-    .beneficio__item {
-        font-size: 3vw;
-    }
-
-    .somos-info__text {
+    .somos-info__text,
+    .beneficio__item,
+    .solutions__desc {
         font-size: 3vw;
     }
 

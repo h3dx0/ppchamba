@@ -184,8 +184,9 @@ Ofrecemos un portafolio de soluciones para cualquier tipo de necesidades en cues
                     <label for="" class="solution__text">Detalle de construcción</label>
                 </div>
             </aside>
-            <h3 class="text-align-center mb-0">... desde cambiar un foco hasta una pequeña remodelación.</h3>
-            <h3 class="text-align-center m0">Solo pide y lo solucionamos por ti.</h3>
+            <h3 class="text-align-center mb-0 solutions__desc">... desde cambiar un foco hasta una pequeña remodelación.
+            </h3>
+            <h3 class="text-align-center m0 solutions__desc">Solo pide y lo solucionamos por ti.</h3>
         </section>
         <section id="beneficios" class="section beneficios">
             <aside class="beneficios-info">
@@ -208,47 +209,45 @@ Ofrecemos un portafolio de soluciones para cualquier tipo de necesidades en cues
                 <img src="img//WEB_Icono naranja contáctanos.png" alt="CONTACTO" width="365">
             </div>
             <div class="contact-info">
-                <h1 class="section__title">- CONTACTO -</h1>
+                <h1 class="section__title">- Contáctanos -</h1>
 
                 <form action="contact.php" method="POST" class="contact-form">
                     <div class="form-row">
-                        <label for="name" class="fs1-5x">Nombre*:</label>
                         <div class="form-row__item">
-                            <input type="text" name="nombre" class="form-row__input">
+                            <input type="text" name="nombre" class="form-row__input" placeholder="Nombre*">
                         </div>
                     </div>
                     <div class="form-row">
-                        <label for="email" class="fs1-5x">Correo*:</label>
                         <div class="form-row__item">
-                            <input type="email" name="correo" class="form-row__input">
+                            <input type="email" name="correo" class="form-row__input" placeholder="Email*">
                         </div>
 
                     </div>
                     <div class="form-row">
-                        <label for="telefono" class="fs1-5x">Teléfono*:</label>
                         <div class="form-row__item">
 
-                            <input type="tel" maxlength="12" name="telefono" class="form-row__input">
+                            <input type="tel" maxlength="12" name="telefono" class="form-row__input"
+                                placeholder="Teléfono*">
                         </div>
 
                     </div>
-                    <div class="form-row">
-                        <label for="mensaje" class="fs1-5x">Mensaje:</label>
+                    <div class="form-row textarea-row">
                         <div class="form-row__item">
 
-                            <textarea type="tel" name="mensaje" class="form-row__input"></textarea>
+                            <textarea type="tel" rows="10" name="mensaje" class="form-row__input"
+                                placeholder="Mensaje*"></textarea>
                         </div>
 
                     </div>
-                    <div class="form-row">
-                        <button class="button">Enviar</button>
+                    <div class="form-row__btn">
+                        <button class="button btn-send">Enviar</button>
                     </div>
                 </form>
             </div>
         </section>
         <section id="contacto-mobile">
             <form action="contact.php" method="POST" class="form-mobile">
-                <h1 class="section__title">- CONTACTO -</h1>
+                <h1 class="section__title">- Contáctanos -</h1>
 
                 <input type="text" name="nombre" class="form-row__input" placeholder="Nombre*">
                 <input type="email" name="correo" class="form-row__input" placeholder="Email*">
