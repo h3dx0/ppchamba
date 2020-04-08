@@ -70,7 +70,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 68vh;
+    height: 694px;
     background-color: var(--mainColor);
     background-image: url('../img/Imz1366Slider.jpg');
     background-size: auto;
@@ -101,7 +101,7 @@ header {
     background-image: url('../img/imagen_Gris_Gris.png');
     background-repeat: no-repeat;
     background-size: contain;
-    height: 68vh;
+    height: 683px;
     justify-content: normal;
 }
 
@@ -110,7 +110,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 40vh;
+    height: 65%;
     padding: 2em;
     background-color: var(--auxiliarColor);
     width: 50%;
@@ -128,7 +128,7 @@ header {
 .solutions {
     display: flex;
     flex-wrap: wrap;
-    width: 60vw;
+    width: 75%;
     margin-bottom: 1em;
     margin-top: 2em;
     box-shadow: -0.3em .3em 0.3em var(--auxiliarColor);
@@ -161,7 +161,7 @@ header {
     background-repeat: no-repeat;
     background-position: right;
     background-size: contain;
-    height: 80vh;
+    height: 747px;
 }
 
 .beneficios-info {
@@ -169,11 +169,15 @@ header {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    max-height: 60vh;
+    height: 70%;
     width: 60%;
     padding: 2em;
     background-color: var(--auxiliarColor);
     box-shadow: -0.3em .3em 0.3em var(--auxiliarColor);
+}
+
+.beneficios-info .section__title {
+    margin-bottom: 0;
 }
 
 .beneficio__item {
@@ -279,4 +283,8 @@ header {
 
 .footer__link--color {
     color: white;
+}
+
+.orange {
+    color: var(--secondaryColor);
 }
