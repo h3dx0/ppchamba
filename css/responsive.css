@@ -11,9 +11,7 @@
 
     .solutions__desc,
     .beneficio__item,
-    .somos-info__text {
-        font-size: 1.5em;
-    }
+    .somos-info__text {}
 
 
 }
@@ -39,9 +37,7 @@
 
     .solutions__desc,
     .somos-info__text,
-    .beneficio__item {
-        font-size: 1.5em;
-    }
+    .beneficio__item {}
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -66,9 +62,7 @@
 
     .solutions__desc,
     .somos-info__text,
-    .beneficio__item {
-        font-size: 1.2em;
-    }
+    .beneficio__item {}
 
     .somos {
         background-color: var(--mainColor);
@@ -77,6 +71,7 @@
 
     .somos-info {
         margin-top: 0;
+        width: 75%;
     }
 
     .beneficios {
@@ -88,6 +83,7 @@
     .beneficios-info {
         margin: 0;
         box-shadow: none;
+        width: 75%;
     }
 
 }
@@ -170,15 +166,14 @@
         min-height: 20vh;
         box-shadow: none;
         padding: 1em;
+        width: 85%;
     }
 
     .section__title {
         font-size: 2em;
     }
 
-    .somos-info__text {
-        font-size: 1.2em;
-    }
+    .somos-info__text {}
 
     .solutions {
         width: 100%;
@@ -187,9 +182,7 @@
 
     .solution__text,
     .beneficio__item,
-    .solutions__desc {
-        font-size: 1.2em;
-    }
+    .solutions__desc {}
 
     .beneficios .section__title {
         margin: 0;
@@ -299,17 +292,8 @@
 
     .somos-info__text,
     .beneficio__item,
-    .solutions__desc {
-        font-size: 3vw;
-    }
+    .solutions__desc {}
 
-    .beneficios {
-        max-height: 40vh;
-    }
-
-    .beneficios-info {
-        max-height: 25vh;
-    }
 
     .somos {
         min-height: 45vh;
@@ -327,9 +311,7 @@
         width: 65%;
     }
 
-    .solution__text {
-        font-size: 3vw;
-    }
+    .solution__text {}
 
     .contacto-footer {
         height: 10vh;
