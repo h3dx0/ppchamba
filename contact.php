@@ -1,20 +1,37 @@
-<?php 
+<?php
+require("sendgrid/sendgrid-php.php"); 
+
+
 ini_set( 'display_errors', 1 );
 error_reporting( E_ALL );
 if(isset($_POST['nombre'])){
-    $to = "robert@puntoreica.com"; // this is your Email address
-    $from = "robert@puntoreica.com"; // this is the sender's Email address
-    $first_name = $_POST['nombre'];
-    $telefono = $_POST['telefono'];
-    $subject = "Contacto desde la web";
-    $message = $first_name . " " . $telefono . " dejo el siguiente mensaje en la web:" . "\n\n" . $_POST['mensaje'];
-    $headers = "From:" . $from;
-    $headers2 = "From:" . $to;
-    mail($to,$subject,$message,$headers);
+
+$email = new \SendGrid\Mail\Mail(); 
+$email->setFrom("hola@ppchambas.com", "Contacto web");
+$email->setSubject("Contacto desde la web ");
+$email->addTo("hola@ppchambas.com", "Contacto desde la web");
+$first_name = $_POST['nombre'];
+$telefono = $_POST['telefono'];
+$emailUser = $_POST['correo'];
+$message = $first_name . "con numero de telefono " . $telefono ." y correo ".$emailUser."\n" ." dejo el siguiente mensaje en la web:" . "\n\n" . $_POST['mensaje'];
+
+$email->addContent("text/plain",$message);
+$email->addContent(
+    "text/html", $message
+);
+$sendgrid = new \SendGrid("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");
+try {
+    $response = $sendgrid->send($email);
+/*    print $response->statusCode() . "\n";
+    print_r($response->headers());
+    print $response->body() . "\n";*/
     echo "Correo enviado. Muchas gracias " . $first_name . ", muy pronto estaremos en contacto.";
     header("refresh:5;url=index.html");
-    }else{
-        echo "Error enviando su mensaje";    
-    }
-    
+} catch (Exception $e) {
+    echo 'Error enviando mensaje: '. $e->getMessage() ."\n";
+	}
+}else{
+    echo "debe ser un post";
+}
+
 ?>
