@@ -1,9 +1,10 @@
 <?php
 require("sendgrid/sendgrid-php.php"); 
-
-
 ini_set( 'display_errors', 1 );
 error_reporting( E_ALL );
+$file = fopen("key.txt","r");
+$sendgridkey= fread($file,filesize("key.txt"));
+fclose($file);
 if(isset($_POST['nombre'])){
 
 $email = new \SendGrid\Mail\Mail(); 
@@ -18,13 +19,14 @@ $message = $first_name . "con numero de telefono " . $telefono ." y correo ".$em
 $email->addContent("text/plain",$message);
 $email->addContent(
     "text/html", $message
-)
-$sendgrid = new \SendGrid(getenv('SENDGRID_PHP'));
+);
+
+   $sendgrid = new \SendGrid($sendgridkey);
 try {
     $response = $sendgrid->send($email);
-/*    print $response->statusCode() . "\n";;
+    print $response->statusCode() . "\n";
     print_r($response->headers());
-    print $response->body() . "\n";*/
+    print $response->body() . "\n";
     echo "Correo enviado. Muchas gracias " . $first_name . ", muy pronto estaremos en contacto.";
     header("refresh:5;url=index.html");
 } catch (Exception $e) {
