@@ -18,8 +18,11 @@ $message = $first_name . "con numero de telefono " . $telefono ." y correo ".$em
 $email->addContent("text/plain",$message);
 $email->addContent(
     "text/html", $message
-);
-$sendgrid = new \SendGrid(""se->statusCode() . "\n";
+)
+$sendgrid = new \SendGrid(getenv('SENDGRID_PHP'));
+try {
+    $response = $sendgrid->send($email);
+/*    print $response->statusCode() . "\n";;
     print_r($response->headers());
     print $response->body() . "\n";*/
     echo "Correo enviado. Muchas gracias " . $first_name . ", muy pronto estaremos en contacto.";
