@@ -19,10 +19,7 @@ $email->addContent("text/plain",$message);
 $email->addContent(
     "text/html", $message
 );
-$sendgrid = new \SendGrid("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");
-try {
-    $response = $sendgrid->send($email);
-/*    print $response->statusCode() . "\n";
+$sendgrid = new \SendGrid(""se->statusCode() . "\n";
     print_r($response->headers());
     print $response->body() . "\n";*/
     echo "Correo enviado. Muchas gracias " . $first_name . ", muy pronto estaremos en contacto.";
